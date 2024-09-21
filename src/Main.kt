@@ -1,14 +1,16 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
-    val name = "Kotlin"
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    println("Hello, " + name + "!")
+    // Ввод числа от пользователя
+    println("Введите натуральное число:")
+    val input = readLine()
 
-    for (i in 1..5) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        println("i = $i")
+    // Проверка на корректный ввод
+    val number = input?.toIntOrNull()
+
+    if (number != null && number > 0) {
+        // Преобразование в двоичную систему
+        val binaryString = number.toString(2)
+        println("Двоичное представление числа $number: $binaryString")
+    } else {
+        println("Пожалуйста, введите корректное натуральное число.")
     }
 }
